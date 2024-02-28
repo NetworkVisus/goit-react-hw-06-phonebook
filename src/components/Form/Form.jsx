@@ -1,11 +1,9 @@
 import * as Styled from './Form.styled';
 import { nanoid } from 'nanoid';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addContactAction } from '../../redux/slices/ContactsSlice/contactsSlice';
-import { contactsSelector } from '../../redux/selectors';
 
 export const Form = () => {
-  const contactsState = useSelector(contactsSelector);
   const dispatch = useDispatch();
 
   const handleSubmit = event => {
